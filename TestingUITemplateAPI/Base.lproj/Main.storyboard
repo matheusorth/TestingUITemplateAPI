@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestingUITemplateAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbm-5A-EBb" userLabel="FixedTopView" customClass="FixedTopView" customModule="TestingUITemplateAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWc-H0-aZC" userLabel="HeaderView">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="bG0-H5-DET"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vWc-H0-aZC" secondAttribute="bottom" id="CNp-is-caf"/>
+                                    <constraint firstItem="vWc-H0-aZC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Pbm-5A-EBb" secondAttribute="top" id="JOG-Sb-xRP"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNW-no-bau">
+                                <rect key="frame" x="0.0" y="108" width="414" height="674"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7w4-vc-SQn" userLabel="ContentView" customClass="ContentView" customModule="TestingUITemplateAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7w4-vc-SQn" firstAttribute="top" secondItem="rNW-no-bau" secondAttribute="top" id="Ehv-5b-TRn"/>
+                                    <constraint firstAttribute="bottom" secondItem="7w4-vc-SQn" secondAttribute="bottom" id="Ist-ak-JaJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="7w4-vc-SQn" secondAttribute="trailing" id="LIc-zg-Lwm"/>
+                                    <constraint firstItem="7w4-vc-SQn" firstAttribute="height" secondItem="rNW-no-bau" secondAttribute="height" priority="250" id="Tt7-7k-ViN"/>
+                                    <constraint firstItem="7w4-vc-SQn" firstAttribute="leading" secondItem="rNW-no-bau" secondAttribute="leading" id="ga8-q3-L5c"/>
+                                    <constraint firstItem="7w4-vc-SQn" firstAttribute="width" secondItem="rNW-no-bau" secondAttribute="width" id="qCL-dM-1vY"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqt-rT-pXo" userLabel="FixedBottomView" customClass="FixedTopView" customModule="TestingUITemplateAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0VR-Sv-X3l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pbm-5A-EBb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0lV-6v-4GF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pbm-5A-EBb" secondAttribute="trailing" id="2FY-GV-qWk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="vWc-H0-aZC" secondAttribute="top" id="3yy-NV-mB4"/>
+                            <constraint firstItem="Pbm-5A-EBb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ade-F5-9wy"/>
+                            <constraint firstItem="gqt-rT-pXo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DqW-XY-2nZ"/>
+                            <constraint firstItem="vWc-H0-aZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F0y-ab-5Gk"/>
+                            <constraint firstItem="gqt-rT-pXo" firstAttribute="top" secondItem="7w4-vc-SQn" secondAttribute="bottom" id="Gms-Ob-EHU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vWc-H0-aZC" secondAttribute="trailing" id="KEO-aU-gmc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rNW-no-bau" secondAttribute="trailing" id="MxZ-ve-6xp"/>
+                            <constraint firstItem="rNW-no-bau" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OSi-Kl-Jq8"/>
+                            <constraint firstItem="7w4-vc-SQn" firstAttribute="top" secondItem="Pbm-5A-EBb" secondAttribute="bottom" id="QNb-9t-iIg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqt-rT-pXo" secondAttribute="trailing" id="btd-Ve-3wA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gqt-rT-pXo" secondAttribute="bottom" id="kt0-p6-807"/>
+                            <constraint firstItem="gqt-rT-pXo" firstAttribute="top" secondItem="rNW-no-bau" secondAttribute="bottom" id="oNF-96-XFe"/>
+                            <constraint firstItem="rNW-no-bau" firstAttribute="top" secondItem="Pbm-5A-EBb" secondAttribute="bottom" id="wEv-Kt-pI8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="7w4-vc-SQn" id="QXc-hc-tmu"/>
+                        <outlet property="fixedBottomView" destination="gqt-rT-pXo" id="u1N-wc-WFw"/>
+                        <outlet property="fixedTopView" destination="Pbm-5A-EBb" id="czi-tw-Zxu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
